@@ -1,6 +1,6 @@
 package src.ProjetoProgramacao;
 
-public class Criatura extends Cartas {
+public class Criatura extends Carta {
     public int dano;
     public int resist;
     public String habilidadeEspecial;
@@ -29,4 +29,14 @@ public class Criatura extends Cartas {
     public String getHabilidade(){
         return this.habilidadeEspecial;
     }
+    
+    public void aplicarHabilidade(){
+        if (getHabilidade().equals(/* nome Habilidade base 1 */)){
+            /*aplica Habilidade 1 */
+        } else if (getHabilidade().equals(/*nome Habilidade base 2 */)){
+            /*aplica Habilidade 2 */
+        } else if (getHabilidade().equals(/*nome Habilidade base 3 */)){
+             /*aplica Habilidade 2 */
+        }
+        }  
 }

@@ -7,7 +7,7 @@ public class JogoDeCartas {
     public Jogador jogador1;
     public Jogador jogador2;
     public Jogador jogadorAtual;
-    ArrayList<Cartas> board;
+    ArrayList<Carta> board;
     private int turno;
 
     public JogoDeCartas(Jogador jogador1, Jogador jogador2) {
@@ -25,6 +25,7 @@ public class JogoDeCartas {
             jogadorAtual = jogador2;
         }
     }
+   
 
     public void comprar() {
         jogadorAtual.comprarCarta();
@@ -62,7 +63,7 @@ public class JogoDeCartas {
         }
     }
 
-    public void jogarCarta(Cartas carta) {
+    public void jogarCarta(Carta carta) {
         if (jogadorAtual.mao.contains(carta)) {
             jogadorAtual.mao.remove(carta);
             jogadorAtual.jogada();
@@ -70,7 +71,7 @@ public class JogoDeCartas {
             // Adicione a lógica para usar a carta, como gastar mana
         }
     }
-
+    
     public void statusInicial() {
         comprarMaoInicial();
         jogador1.ganharMana();
@@ -80,10 +81,10 @@ public class JogoDeCartas {
     public void escolherAlvo(Object alvo) {
         if (alvo instanceof Jogador) {
             Jogador jogadorAlvo = (Jogador) alvo;
-            Jogador.danoVida();
+            danoRecebidoJogador(jogadorAlvo);
         } else if (alvo instanceof Criatura) {
             Criatura criaturaAlvo = (Criatura) alvo;
-            Criatura.ataque();
+            danoRecebidoCriatura(criaturaAlvo);
         }
     }
 

@@ -1,11 +1,11 @@
 package src.ProjetoProgramacao;
 
-abstract class Cartas extends Exception {
+abstract class Carta extends Exception {
 
     public String nome;
     public int custoMana;
 
-    public Cartas(String nome, int custoMana) {
+    public Carta(String nome, int custoMana) {
         this.nome = nome;
         this.custoMana = custoMana;
     }

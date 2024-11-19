@@ -1,6 +1,6 @@
 package src.ProjetoProgramacao;
 
-public class Feitico extends Cartas {
+public class Feitico extends Carta {
 
     private String efeito;
 
@@ -11,7 +11,19 @@ public class Feitico extends Cartas {
     public String getEfeito(){
         return this.efeito;
     }
-}    
+
+    public void aplicarEfeito(){
+        if (getEfeito().equals(/* nome efeito base 1 */)){
+            /*aplica efeito 1 */
+        } else if (getEfeito().equals(/*nome efeito base 2 */)){
+            /*aplica efeito 2 */
+        } else if (getEfeito().equals(/*nome efeito base 3 */)){
+             /*aplica efeito 2 */
+        }
+
+        }
+}  
+
 
 
 

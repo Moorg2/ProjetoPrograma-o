@@ -7,9 +7,9 @@ abstract class Jogador {
     public int vida;
     public int mana;
     private int turno;
-    ArrayList<Cartas> deck;
-    ArrayList<Cartas> mao;
-    ArrayList<Cartas> cemiterio;
+    ArrayList<Carta> deck;
+    ArrayList<Carta> mao;
+    ArrayList<Carta> cemiterio;
 
     public Jogador(String nome) {
         this.nome = nome;
@@ -52,7 +52,7 @@ abstract class Jogador {
 
     public void comprarCarta() {
         if (!deck.isEmpty()) {
-            Cartas carta = deck.remove(0);
+            Carta carta = deck.remove(0);
             mao.add(carta);
         } else {
             jogadorAtual.setVida(0);
