@@ -1,19 +1,16 @@
 package interfaceGrafica;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.SwingUtilities;
+import ProjetoProgramacao.JogoDeCartas;
 
-import individuos.Jogador;
-import individuos.JogadorConcreto;
-import src.ProjetoProgramacao.JogoDeCartas;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Screen extends JFrame {
 
-    private JogoDeCartas jogo; // Instância de JogoDeCartas
 
-    public Screen(JogoDeCartas jogo) {
-        this.jogo = jogo;
+    public Screen() {
         setTitle("Crônicas de Arcana");
         setVisible(true);
         setSize(900, 900);
@@ -28,13 +25,11 @@ public class Screen extends JFrame {
         jButton.setFont(new Font("Arial", Font.PLAIN, 30));
         jButton.setBackground(Color.LIGHT_GRAY); // Cor de fundo
         jButton.setForeground(Color.BLACK); // Cor do texto
-        
+
         // Adicionar ActionListener ao botão
         jButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Chama o método iniciar() da instância de JogoDeCartas
-                jogo.iniciar();
             }
         });
 
@@ -43,14 +38,7 @@ public class Screen extends JFrame {
     }
 
     public static void main(String[] args) {
-   
-        Jogador jogador1 = new JogadorConcreto("Jogador 1");
-        Jogador jogador2 = new JogadorConcreto("Jogador 2");
 
-        JogoDeCartas jogo = new JogoDeCartas(jogador1, jogador2);
-
-       
-        SwingUtilities.invokeLater(() -> new Screen(jogo)); // Para thread-safety
     }
 }
 

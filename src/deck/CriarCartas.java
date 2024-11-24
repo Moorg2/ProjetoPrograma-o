@@ -1,8 +1,8 @@
 package deck;
 
 import individuos.Criatura;
-import src.ProjetoProgramacao.Encantamento;
-import src.ProjetoProgramacao.Feitico;
+import modificadores.Encantamento;
+import modificadores.Feitico;
 
 public class CriarCartas extends Criatura {
 public CriarCartas(String nomes, int custoMana, int dano, int resist, String habilidadeEspecial) {

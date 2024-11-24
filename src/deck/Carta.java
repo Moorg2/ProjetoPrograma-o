@@ -1,8 +1,8 @@
 package deck;
 
 import erro.ManaInsuficienteException;
-
-public abstract class Carta {
+import individuos.Jogador;
+public class Carta {
     public String nome;
     public int custoMana;
 
@@ -16,14 +16,9 @@ public abstract class Carta {
     }
 
     public void jogar() throws ManaInsuficienteException {
-        if (getManaDisponivel() < custoMana) {
+        if (Jogador.getManaDisponivel() < custoMana) {
             throw new ManaInsuficienteException("Você não tem mana suficiente para jogar a carta " + getNome());
         }
-        // Lógica para jogar a carta
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public String getNome() {
